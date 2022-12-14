@@ -1,0 +1,18 @@
+{
+  "name": "crimeCloud",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "functions-framework --target=scrapeCrime"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.1.2",
+    "parse": "^3.5.1",
+    "puppeteer": "^19.3.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
