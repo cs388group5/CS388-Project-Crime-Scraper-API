@@ -2,7 +2,7 @@
 This code details the crime scraper that I created to take in city variables from the app and return crime data based on the location.
 
 * Setting up sandbox
-```
+``` javascript
 exports.scrapeCrime = async (req,res) => {
 
     const puppeteer = require('puppeteer');
@@ -26,7 +26,7 @@ exports.scrapeCrime = async (req,res) => {
 
 * Scraping Information
 
-```
+``` javascript
 var type_of_crime = await page.evaluate(`document.querySelector("#map-page__crime-list").getElementsByTagName('a')[${x}].getElementsByClassName('map-page__crime-list__crime-card-title')[0].textContent`)
         var address = await page.evaluate(`document.querySelector("#map-page__crime-list").getElementsByTagName('a')[${x}].getElementsByClassName('map-page__crime-list__crime-card-address')[0].textContent`)
         var time_and_date = await page.evaluate(`document.querySelector("#map-page__crime-list").getElementsByTagName('a')[${x}].getElementsByClassName('map-page__crime-list__crime-card-date')[0].textContent`)
@@ -34,7 +34,7 @@ var type_of_crime = await page.evaluate(`document.querySelector("#map-page__crim
 ```
 
 to help puppeteer run efficiently
-```
+``` javascript
 const {join} = require('path');
 
 /**
